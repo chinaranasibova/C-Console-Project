@@ -12,8 +12,10 @@ namespace MarketingSystems.Data.Entities
         private static int _count = 0;
         public int No { get; set; }
         public int PriceAmount { get; set; }
-        public Salesİtem Salesİtem { get; set; }
-        public DateTime DateTime { get; set; }
+        public Salesİtems Salesİtem { get; set; }
+        public DateTime SaleDate{ get; set; }
+       
+
         public Sales()
         {
             _count++;

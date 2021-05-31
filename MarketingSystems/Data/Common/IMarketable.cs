@@ -11,26 +11,26 @@ namespace MarketingSystems.Service
 {
     interface IMarketable
     {
-        public List<Sales> Sales { get; set; }
-        public List< Product> Product { get; set; }
-        public void AddSales(Salesİtem salesİtem);
-        public void ReturnProductFromSale();
+        public List<Sales> Sales { get; }
+        public List< Product> Product { get;}
+        public void AddSales(Salesİtems salesİtem);
+        public void ReturnProductFromSale(int No, int CodeProduct ,int count);
         public void ReturnSale();
 
         public void DeleteSales(int no);
 
-        public void SaleSearchWithDate();
+        public List<Sales> SaleSearchWithDate(DateTime date);
         public void SearchSaleWitHDateRange();
        
-        public void SearchSaleWithPriceRange();
-        public void SearcSaleWithNo(int no);
+        public List<Product> SearchSaleWithPriceRange();
+        public Sales SearcSaleWithNo(int no);
 
 
 
         public int AddProduct(string name, double price, Categories category, int count);
         public void EditProductInfo(int code, string name, double price, Categories category, int count);
-        public void SearchProductWithCategoria(Categories category);
-        public void SearchProductWithPriceRange(Double StartPrice, double EndPrice);
+        public List<Product> SearchProductWithCategoria(Categories category);
+        public List<Product> DisplayProductsByRangeOfPrice(double minPrice, double maxPrice);
         public void SearcProductWithName(string name);
         public void DeleteProduct(int code);
         

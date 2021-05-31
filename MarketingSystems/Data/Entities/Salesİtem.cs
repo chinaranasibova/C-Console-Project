@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarketingSystems.Data.Entities
 {
-  public  class Salesİtem
+  public  class Salesİtems
     {
         public  int No{ get; set; }
         public Product Product{ get; set; }
